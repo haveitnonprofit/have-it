@@ -30,9 +30,10 @@ Above mentioned 3 apps will not have any local computation (for security reasons
 The central server is responsible for all of the actions from each of the app and coordination between the different apps. Each and every functional api endpoints will be defined here and will be secured through RBAC.
 
 #### Tech stack :
-1. NESTJS (nodejs based server writing framework).
-2. POSTGRESQL via TYPEORM (database).
-3. SWAGGER (Api documentation framework).
-4. JEST (Unit testing framework).
-5. SUPERTEST (End to end testing).
-6. GLITCHTIP (Hosted system for log observation)
+1. DOCKER (for running the app in different types of containers so that deployment and onboarding developers on this app for development becomes easier)
+2. NESTJS (nodejs based server writing framework).
+3. POSTGRESQL via TYPEORM (database).
+4. SWAGGER (Api documentation framework).
+5. JEST (Unit testing framework).
+6. SUPERTEST (End to end testing).
+7. GLITCHTIP (Hosted system for log observation)
