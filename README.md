@@ -15,3 +15,12 @@ This project is never meant to be a business, this is a people’s company, ever
 3. For code contributers and engineers : An eternal proof of work that is directly related to public welfare and a platform to contribute and proof their skills and a lumpsum salary payment or bug bounty lumpsum payment (when possible) for the gratification of their hardwork.
 
 **PLEASE NOTE THAT ALL THE ACCOUNTING INFORMATION OF THIS PROJECT WILL BE AVAILABLE ONLINE FOR VIEW FOR ALL FOR THEIR CRITICISM AND ALWAYS MAKING SURE THIS PROJECT MUST NEVER TURN TO A BUSINESS AND NO VENTURE CAPITALISTS ARE PERMITTED TO PROVIDE ANY SORT OF INVESTMENT, HOWEVER DONATIONS ARE WELCOMED ABIDE BY THE DONATION LAWS FROM THE GOVERNMENT, IN THE CORE THIS PROJECT MACHINERY IS ACTUALLY OPERATED BY SHOPKEEPERS AND DELIVERY PARTNERS AND IS FUNDED BY THEIR MONTHLY SUBSCRIPTION OF rs. 99/- (HOWEVER THIS PRICE CAN BE REVISED AFTER DISCUSSING THIS WITH A CONTRIBUTER WHO IS A ECONOMISTS WITH A AIM TO KEEP THIS THIS AS LOW AS POSSIBLE AND SET A PRICE FOR WHICH THIS PROJECT CAN BE OPERATED WITHOUT ANY VC INVESTMENT).**
+
+## System design
+
+### Overview 
+The entire system is comprised in 3 apps :
+- haveit : The main app from where the customers gonna place their order
+- haveit store : The app using which the shopkeepers will be listing their products.
+- haveit delivery partner : The app using which the delivery partners will moderate the order delivery 
+
