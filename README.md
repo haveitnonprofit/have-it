@@ -24,3 +24,4 @@ The entire system is comprised in 3 apps :
 - haveit store : The app using which the shopkeepers will be listing their products.
 - haveit delivery partner : The app using which the delivery partners will moderate the order delivery 
 
+Above mentioned 3 apps will not have any local computation (for security reasons) unless absolutely required for certain less secure tasks. All those will communicate to or through the server to operate or communicate to each other.
