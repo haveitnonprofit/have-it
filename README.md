@@ -25,3 +25,13 @@ The entire system is comprised in 3 apps :
 - haveit delivery partner : The app using which the delivery partners will moderate the order delivery 
 
 Above mentioned 3 apps will not have any local computation (for security reasons) unless absolutely required for certain less secure tasks. All those will communicate to or through the server to operate or communicate to each other.
+
+### Server architecture
+The central server is responsible for all of the actions from each of the app and coordination between the different apps. Each and every functional api endpoints will be defined here and will be secured through RBAC.
+
+#### Tech stack :
+1. NESTJS (nodejs based server writing framework).
+2. SWAGGER (Api documentation framework).
+3. JEST (Unit testing framework).
+4. SUPERTEST (End to end testing).
+5. GLITCHTIP (Hosted system for log observation)
