@@ -31,7 +31,8 @@ The central server is responsible for all of the actions from each of the app an
 
 #### Tech stack :
 1. NESTJS (nodejs based server writing framework).
-2. SWAGGER (Api documentation framework).
-3. JEST (Unit testing framework).
-4. SUPERTEST (End to end testing).
-5. GLITCHTIP (Hosted system for log observation)
+2. POSTGRESQL via TYPEORM (database).
+3. SWAGGER (Api documentation framework).
+4. JEST (Unit testing framework).
+5. SUPERTEST (End to end testing).
+6. GLITCHTIP (Hosted system for log observation)
