@@ -1,4 +1,4 @@
-# Haveit - an opensource quick commerce platform built by people built for people not for a single person or business to be richer and more richer.
+# Haveit - The backend for the opensource quick commerce platform built by people built for people not for a single person or business to be richer and more richer.
 
 ## What is haveit?
 
