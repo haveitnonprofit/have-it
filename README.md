@@ -53,7 +53,7 @@ Since this is a dockerized project so you don't need any external packages to in
 This project supports agentic development using **opencode**. The AI agent can explore the codebase, propose changes, and implement them with your approval.
 
 **Setup:**
-1. Install opencode from [opencode's official website](https://opencode.com).
+1. Install opencode from [opencode's official website](https://opencode.ai/).
 2. Open this project in opencode (or any editor that supports opencode).
 3. The agent already has all the context it needs from the project's `.opencode/` configuration.
 
