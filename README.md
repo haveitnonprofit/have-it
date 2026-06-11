@@ -47,3 +47,20 @@ Since this is a dockerized project so you don't need any external packages to in
 1. Clone this repo.
 2. Open this repo in vscode (or any other code editor of your choice i am using vscode here so the further steps are as per vscode, you can understand what i am trying to do and replicate this in your code editor of choice).
 3. You will see a message in the bottom right corner of the vscode like "Reopen folder in container" continue to reopen it, this will reopen the entire project in the dev container and you will be logged into the container terminal, the vscode terminal now is actually the container terminal. If you dont see the message popped up in the bottom right then use "ctrl + p" to open the vscode command window and type ">Reopen in container" to open the project as per mentioned.
+
+### Agentic development using opencode
+
+This project supports agentic development using **opencode**. The AI agent can explore the codebase, propose changes, and implement them with your approval.
+
+**Setup:**
+1. Install opencode from [opencode's official website](https://opencode.com).
+2. Open this project in opencode (or any editor that supports opencode).
+3. The agent already has all the context it needs from the project's `.opencode/` configuration.
+
+**Usage:**
+Simply describe the task you want done in natural language. For example:
+- *"Add a volume for PostgreSQL data in docker-compose.yml"*
+- *"Remove external PostgreSQL connection code from startup.sh"*
+- *"Fix the terminal profile in devcontainer.json"*
+
+The agent will explore the relevant files, propose a plan, wait for your approval, and then implement the changes.
