@@ -18,8 +18,5 @@
       }
     }
   },
-  "forwardPorts": [3000, 5432],
-  "postCreateCommand": "cd apps/backend && echo 'Dev container ready - skipping pnpm install'",
-  "initializeCommand": "echo 'Skipping automatic install'",
   "remoteUser": "root"
 }
