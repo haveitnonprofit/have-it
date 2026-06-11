@@ -13,7 +13,7 @@
         "ms-vscode.vscode-typescript-next"
       ],
       "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.defaultProfile.linux": "ash",
         "terminal.integrated.cwd": "/workspace"
       }
     }
