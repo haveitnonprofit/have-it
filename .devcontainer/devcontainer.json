@@ -1,0 +1,25 @@
+{
+  "name": "haveit backend",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "ms-vscode.vscode-typescript-next"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.cwd": "/workspace"
+      }
+    }
+  },
+  "forwardPorts": [3000, 5432],
+  "postCreateCommand": "cd apps/backend && echo 'Dev container ready - skipping pnpm install'",
+  "initializeCommand": "echo 'Skipping automatic install'",
+  "remoteUser": "root"
+}

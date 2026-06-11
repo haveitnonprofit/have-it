@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
+    volumes:
+      - .:/workspace:Z
+      - /workspace/node_modules
+      - pgdata:/var/lib/postgresql/data
+    working_dir: /workspace
+
+volumes:
+  pgdata:

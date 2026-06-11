@@ -1,0 +1,18 @@
+FROM node:20-alpine
+
+# Install PostgreSQL
+RUN apk add --no-cache postgresql postgresql-contrib git
+
+# Configure git to trust the workspace directory
+RUN git config --system --add safe.directory /workspace
+
+WORKDIR /workspace
+
+
+# Copy startup script for PostgreSQL
+COPY startup.sh /usr/local/bin/startup.sh
+RUN chmod +x /usr/local/bin/startup.sh
+
+
+# Only start PostgreSQL - app will be started by developer in VSCode terminal
+CMD ["/usr/local/bin/startup.sh"]
