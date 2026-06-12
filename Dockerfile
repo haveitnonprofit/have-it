@@ -11,6 +11,8 @@ WORKDIR /workspace
 # Enable corepack for pnpm
 RUN corepack enable && corepack prepare pnpm@11 --activate
 
+ENV PATH="/root/.local/share/pnpm/bin:${PATH}"
+RUN pnpm i -g @nestjs/cli
 
 # Copy startup script for PostgreSQL
 COPY startup.sh /usr/local/bin/startup.sh
