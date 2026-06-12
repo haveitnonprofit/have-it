@@ -1,4 +1,4 @@
-FROM node:20-alpine
+FROM node:24-alpine
 
 # Install PostgreSQL
 RUN apk add --no-cache postgresql postgresql-contrib git
@@ -9,7 +9,7 @@ RUN git config --system --add safe.directory /workspace
 WORKDIR /workspace
 
 # Enable corepack for pnpm
-RUN corepack enable && corepack prepare pnpm@10 --activate
+RUN corepack enable && corepack prepare pnpm@11 --activate
 
 
 # Copy startup script for PostgreSQL
