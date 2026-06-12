@@ -31,12 +31,13 @@ The central server is responsible for all of the actions from each of the app an
 
 #### Tech stack :
 1. DOCKER (for running the app in different types of containers so that deployment and onboarding developers on this app for development becomes easier)
-2. NESTJS (nodejs based server writing framework).
-3. POSTGRESQL via TYPEORM (database).
-4. SWAGGER (Api documentation framework).
-5. JEST (Unit testing framework).
-6. SUPERTEST (End to end testing).
-7. GLITCHTIP (Hosted system for log observation)
+2. PNPM (package manager)
+3. NESTJS (nodejs based server writing framework).
+4. POSTGRESQL via TYPEORM (database).
+5. SWAGGER (Api documentation framework).
+6. JEST (Unit testing framework).
+7. SUPERTEST (End to end testing).
+8. GLITCHTIP (Hosted system for log observation)
 
 ## Development guide
 

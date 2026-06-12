@@ -8,6 +8,9 @@ RUN git config --system --add safe.directory /workspace
 
 WORKDIR /workspace
 
+# Enable corepack for pnpm
+RUN corepack enable && corepack prepare pnpm@10 --activate
+
 
 # Copy startup script for PostgreSQL
 COPY startup.sh /usr/local/bin/startup.sh
