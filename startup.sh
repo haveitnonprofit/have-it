@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# Kill any previous process running on APP_PORT
+if [ -n "$APP_PORT" ]; then
+    fuser -k "${APP_PORT}/tcp" 2>/dev/null && echo "Stopped previous process on port $APP_PORT"
+fi
+
 # PostgreSQL setup
 export PGDATA=/var/lib/postgresql/data
 
