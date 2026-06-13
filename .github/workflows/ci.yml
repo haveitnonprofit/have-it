@@ -61,6 +61,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request'
     steps:
+      - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 24
@@ -70,8 +72,8 @@ jobs:
         with:
           version: 11
 
-      - name: Install commitlint
-        run: pnpm add -g @commitlint/cli @commitlint/config-conventional
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: Check PR title
         env:
