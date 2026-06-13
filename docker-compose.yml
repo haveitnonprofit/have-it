@@ -8,9 +8,10 @@ services:
       - "${APP_PORT}:${APP_PORT}"
     volumes:
       - .:/workspace:Z
-      - /workspace/node_modules
+      - pnpm-node_modules:/workspace/node_modules
       - pgdata:/var/lib/postgresql/data
     working_dir: /workspace
 
 volumes:
+  pnpm-node_modules:
   pgdata:

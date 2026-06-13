@@ -48,7 +48,6 @@ Since this is a dockerized project so you don't need any external packages to in
 1. Clone this repo.
 2. Open this repo in vscode (or any other code editor of your choice i am using vscode here so the further steps are as per vscode, you can understand what i am trying to do and replicate this in your code editor of choice).
 3. You will see a message in the bottom right corner of the vscode like "Reopen folder in container" continue to reopen it, this will reopen the entire project in the dev container and you will be logged into the container terminal, the vscode terminal now is actually the container terminal. If you dont see the message popped up in the bottom right then use "ctrl + p" to open the vscode command window and type ">Reopen in container" to open the project as per mentioned.
-4. Now since the project container is opened in vscode and the vscode terminal is actually the container terminal so you can now run any command in the container from this terminal only. After every old container purge and new container build or first container start you need to do `pnpm i` to install all the packages and then you are ready to go for further development.
 
 ### Agentic development using opencode
 

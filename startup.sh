@@ -65,5 +65,10 @@ echo "=========================================="
 echo "Database is ready!"
 echo "=========================================="
 
+# Install dependencies
+echo "Installing dependencies..."
+pnpm install --frozen-lockfile --ignore-scripts
+echo "Dependencies installed."
+
 # Keep container running
 tail -f /dev/null
