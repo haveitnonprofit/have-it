@@ -25,6 +25,45 @@ RUN npm i -g @nestjs/cli
 # Configure git branch in shell prompt
 RUN echo "PS1='\\w \$(git branch --show-current 2>/dev/null)\\\$ '" >> /root/.profile
 
+# Wrap git checkout/switch to enforce branch naming conventions
+RUN cat >> /root/.profile << 'HOOK'
+git() {
+  if [ "$1" = "checkout" ] && [ "$2" = "-b" ] && [ -n "$3" ]; then
+    case "$3" in
+      main|feat/*|fix/*|docs/*|refactor/*|chore/*)
+        command git "$@"
+        ;;
+      *)
+        echo ""
+        echo "  ❌ Cannot create branch \"$3\"."
+        echo "     Branch name doesn't follow conventions."
+        echo "     Allowed: feat/* | fix/* | docs/* | refactor/* | chore/*"
+        echo "     Example: chore/your-feature-name"
+        echo ""
+        return 1
+        ;;
+    esac
+  elif [ "$1" = "switch" ] && [ "$2" = "-c" ] && [ -n "$3" ]; then
+    case "$3" in
+      main|feat/*|fix/*|docs/*|refactor/*|chore/*)
+        command git "$@"
+        ;;
+      *)
+        echo ""
+        echo "  ❌ Cannot create branch \"$3\"."
+        echo "     Branch name doesn't follow conventions."
+        echo "     Allowed: feat/* | fix/* | docs/* | refactor/* | chore/*"
+        echo "     Example: chore/your-feature-name"
+        echo ""
+        return 1
+        ;;
+    esac
+  else
+    command git "$@"
+  fi
+}
+HOOK
+
 # Source .profile for all interactive ash shells (not just login shells)
 ENV ENV=/root/.profile
 

@@ -70,7 +70,9 @@ echo "Installing dependencies..."
 pnpm install --frozen-lockfile
 echo "Dependencies installed."
 
-# Configure git commit template
+# Ensure hooks are executable and configure git
+chmod +x .githooks/* 2>/dev/null || true
+git config core.hooksPath .githooks && echo "Git hooks configured." || true
 git config commit.template .gitmessage 2>/dev/null && echo "Git commit template configured." || true
 
 # Keep container running

@@ -11,6 +11,25 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  branch-name:
+    name: Validate branch name
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Check branch name
+        env:
+          BRANCH: ${{ github.head_ref }}
+        run: |
+          if [[ "$BRANCH" =~ ^(feat/|fix/|docs/|refactor/|chore/) ]]; then
+            echo "✅ Branch name \"$BRANCH\" follows conventions."
+          else
+            echo "❌ Branch name \"$BRANCH\" doesn't follow conventions."
+            echo "   Allowed: feat/* | fix/* | docs/* | refactor/* | chore/*"
+            echo "   Example: chore/commit-conventions-and-ci"
+            exit 1
+          fi
+
+
   commitlint:
     name: Validate commit messages
     runs-on: ubuntu-latest
@@ -33,7 +52,7 @@ jobs:
         run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: Validate PR commits
-        uses: commitlint-org/commitlint-action@v1
+        uses: wagoid/commitlint-github-action@v6
         with:
           helpURL: https://github.com/s-b-code/have-it/blob/main/CONTRIBUTING.md#commit-message-conventions
 
