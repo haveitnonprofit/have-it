@@ -100,11 +100,7 @@ This project follows **Conventional Commits**. This leads to clearer history and
 <optional footer>
 ```
 
-The commit template is configured at `.gitmessage` and shows automatically when you run `git commit`. Enable it with:
-
-```bash
-git config commit.template .gitmessage
-```
+The commit template is configured at `.gitmessage` and shows automatically when you run `git commit`. 
 
 ### Types
 
@@ -170,47 +166,6 @@ Use short, descriptive names prefixed with the relevant category:
 | `chore/` | `chore/update-dependencies` |
 
 Use hyphens to separate words. Avoid including issue numbers in branch names — link the PR to the issue instead.
-
----
-
-## Pull Request Workflow
-
-1. **Create a feature branch** from `main`:
-   ```bash
-   git checkout main
-   git pull origin main
-   git checkout -b feat/your-feature-name
-   ```
-
-2. **Make your changes** with clear, conventional commits.
-
-3. **Keep your branch up to date** with `main`:
-   ```bash
-   git fetch origin
-   git rebase origin/main
-   ```
-
-4. **Run tests and linting** before pushing:
-   ```bash
-   pnpm lint && pnpm test
-   ```
-
-5. **Push your branch**:
-   ```bash
-   git push origin feat/your-feature-name
-   ```
-
-6. **Open a Pull Request** on GitHub using the PR template. Fill in the:
-   - **Description** — what does this change do?
-   - **Type of change** — feat, fix, refactor, etc.
-   - **Testing** — how was this tested?
-   - **Checklist** — verify each item.
-
-7. **Address review feedback** by pushing additional commits to the same branch.
-
-8. **Squash if requested** — otherwise your commits are merged as-is via a merge commit.
-
-9. **Celebrate** — your contribution is live! 🎉
 
 ---
 
