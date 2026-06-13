@@ -10,7 +10,8 @@
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "bradlc.vscode-tailwindcss",
-        "eamodio.gitlens"
+        "eamodio.gitlens",
+        "GitHub.vscode-github-actions"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "ash",
