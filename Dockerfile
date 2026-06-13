@@ -16,8 +16,8 @@ RUN pnpm config set store-dir /root/.pnpm-store
 
 # Install project dependencies into image (populates pnpm store + node_modules)
 # --ignore-scripts: safe in devcontainer, packages run scripts naturally at runtime if needed
-COPY package.json pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile --ignore-scripts
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+RUN pnpm install --frozen-lockfile
 
 # Install NestJS CLI globally via npm (pnpm global installs break schematics resolution)
 RUN npm i -g @nestjs/cli
