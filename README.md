@@ -46,8 +46,9 @@ Since this is a dockerized project so you don't need any external packages to in
 
 **Since you have docker in your system follow the following steps to run this project locally and start contributing or extending this project :**
 1. Clone this repo.
-2. Open this repo in vscode (or any other code editor of your choice i am using vscode here so the further steps are as per vscode, you can understand what i am trying to do and replicate this in your code editor of choice).
-3. You will see a message in the bottom right corner of the vscode like "Reopen folder in container" continue to reopen it, this will reopen the entire project in the dev container and you will be logged into the container terminal, the vscode terminal now is actually the container terminal. If you dont see the message popped up in the bottom right then use "ctrl + p" to open the vscode command window and type ">Reopen in container" to open the project as per mentioned.
+2. Create a copy of the `.env.example` and rename it to `.env` change the respective values if required.
+3. Open this repo in vscode (or any other code editor of your choice i am using vscode here so the further steps are as per vscode, you can understand what i am trying to do and replicate this in your code editor of choice).
+4. You will see a message in the bottom right corner of the vscode like "Reopen folder in container" continue to reopen it, this will reopen the entire project in the dev container and you will be logged into the container terminal, the vscode terminal now is actually the container terminal. If you dont see the message popped up in the bottom right then use "ctrl + p" to open the vscode command window and type ">Reopen in container" to open the project as per mentioned.
 
 ### Agentic development using opencode
 
