@@ -67,8 +67,11 @@ echo "=========================================="
 
 # Install dependencies
 echo "Installing dependencies..."
-pnpm install --frozen-lockfile --ignore-scripts
+pnpm install --frozen-lockfile
 echo "Dependencies installed."
+
+# Configure git commit template
+git config commit.template .gitmessage 2>/dev/null && echo "Git commit template configured." || true
 
 # Keep container running
 tail -f /dev/null

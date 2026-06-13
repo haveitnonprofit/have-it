@@ -1,0 +1,25 @@
+# <type>: <subject>
+# │         │
+# │         └─ Short summary (imperative, no period, ≤ 50 chars)
+# │
+# └─ feat | fix | docs | style | refactor | perf | test | build | ci | chore | revert
+#
+# <body>  (optional, wrap at 72 chars, explain what and why, not how)
+#
+# <footer>  (optional — BREAKING CHANGE, Closes #N, Ref #N)
+#
+# ── Examples ────────────────────────────────────────────────────────
+# feat: add user authentication
+# fix: resolve NPE when user payload is null
+# docs: update API endpoint references
+# refactor: extract validation into dedicated service
+# test: add unit tests for OrderService
+# chore: bump express from 4.18 to 4.19
+#
+# breaking: change auth token format
+#
+# BREAKING CHANGE: old tokens signed with HS256 are no longer accepted.
+# All clients must rotate to RS256 tokens before upgrading.
+#
+# Closes #42
+# ─────────────────────────────────────────────────────────────────────

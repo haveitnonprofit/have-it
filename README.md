@@ -38,31 +38,3 @@ The central server is responsible for all of the actions from each of the app an
 6. JEST (Unit testing framework).
 7. SUPERTEST (End to end testing).
 8. GLITCHTIP (Hosted system for log observation)
-
-## Development guide
-
-### Run this project locally
-Since this is a dockerized project so you don't need any external packages to install in order to run this project, but this project requires docker daemon to be running in the machine where you want to run this project, the docker daemon gets installed automatically when you install docker desktop, go to the docker website to install docker if not already installed on your system.
-
-**Since you have docker in your system follow the following steps to run this project locally and start contributing or extending this project :**
-1. Clone this repo.
-2. Create a copy of the `.env.example` and rename it to `.env` change the respective values if required.
-3. Open this repo in vscode (or any other code editor of your choice i am using vscode here so the further steps are as per vscode, you can understand what i am trying to do and replicate this in your code editor of choice).
-4. You will see a message in the bottom right corner of the vscode like "Reopen folder in container" continue to reopen it, this will reopen the entire project in the dev container and you will be logged into the container terminal, the vscode terminal now is actually the container terminal. If you dont see the message popped up in the bottom right then use "ctrl + p" to open the vscode command window and type ">Reopen in container" to open the project as per mentioned.
-
-### Agentic development using opencode
-
-This project supports agentic development using **opencode**. The AI agent can explore the codebase, propose changes, and implement them with your approval.
-
-**Setup:**
-1. Install opencode from [opencode's official website](https://opencode.ai/).
-2. Open this project in opencode (or any editor that supports opencode).
-3. The agent already has all the context it needs from the project's `.opencode/` configuration.
-
-**Usage:**
-Simply describe the task you want done in natural language. For example:
-- *"Add a volume for PostgreSQL data in docker-compose.yml"*
-- *"Remove external PostgreSQL connection code from startup.sh"*
-- *"Fix the terminal profile in devcontainer.json"*
-
-The agent will explore the relevant files, propose a plan, wait for your approval, and then implement the changes.
