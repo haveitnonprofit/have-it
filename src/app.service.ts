@@ -2,6 +2,10 @@ import { Injectable } from '@nestjs/common';
 import { InjectDataSource } from '@nestjs/typeorm';
 import { DataSource } from 'typeorm';
 
+export namespace AppService {
+  export type GetHealth = Awaited<ReturnType<AppService['getHealth']>>;
+}
+
 @Injectable()
 export class AppService {
   constructor(@InjectDataSource() private readonly dataSource: DataSource) {}

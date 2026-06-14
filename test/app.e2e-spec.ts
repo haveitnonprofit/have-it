@@ -4,7 +4,7 @@ import request from 'supertest';
 import { App } from 'supertest/types';
 import { getDataSourceToken } from '@nestjs/typeorm';
 import { AppModule } from './../src/app.module';
-import type { AppService } from '../src/app.service';
+import { AppService } from '../src/app.service';
 
 describe('AppController (e2e)', () => {
   let app: INestApplication<App>;
@@ -30,7 +30,7 @@ describe('AppController (e2e)', () => {
       .get('/')
       .expect(200)
       .expect((res: request.Response) => {
-        const body = res.body as Awaited<ReturnType<AppService['getHealth']>>;
+        const body = res.body as AppService.GetHealth;
         expect(body.status).toBe('ok');
         expect(body.database).toBe('connected');
         expect(body).toHaveProperty('timestamp');
