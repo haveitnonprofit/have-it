@@ -1,4 +1,4 @@
-<!-- Context: project-intelligence/technical | Priority: high | Version: 1.0 | Updated: 2025-01-12 -->
+<!-- Context: project-intelligence/technical | Priority: high | Version: 1.0 | Updated: 2026-06-14 -->
 
 # Technical Domain
 
@@ -14,11 +14,11 @@
 
 | Layer | Technology | Version | Rationale |
 |-------|-----------|---------|-----------|
-| Language | [e.g., TypeScript] | [Version] | [Why this language] |
-| Framework | [e.g., Node.js] | [Version] | [Why this framework] |
-| Database | [e.g., PostgreSQL] | [Version] | [Why this database] |
-| Infrastructure | [e.g., AWS, Vercel] | [N/A] | [Why this infra] |
-| Key Libraries | [List important ones] | [Versions] | [Why each matters] |
+| Language | TypeScript | ^5.7.3 | Type safety, NestJS ecosystem standard |
+| Framework | NestJS | ^11.0.1 | Modular architecture, dependency injection, decorator-based |
+| Database | PostgreSQL | 16 | Reliable, ACID compliant, JSON support |
+| Infrastructure | Docker / Podman | — | Containerized development & deployment |
+| Key Libraries | TypeORM, pg | Latest | TypeORM for schema/entity management, pg driver for PostgreSQL |
 
 ## Architecture Pattern
 
