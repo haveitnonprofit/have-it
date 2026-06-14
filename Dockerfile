@@ -64,6 +64,19 @@ git() {
 }
 HOOK
 
+# Wrap pnpm to auto-clear TypeScript cache after install/add
+RUN cat >> /root/.profile << 'HOOK'
+pnpm() {
+  command pnpm "$@"
+  case $1 in
+    install|add)
+      rm -f /workspace/tsconfig.tsbuildinfo
+      touch /workspace/tsconfig.json
+      ;;
+  esac
+}
+HOOK
+
 # Source .profile for all interactive ash shells (not just login shells)
 ENV ENV=/root/.profile
 
