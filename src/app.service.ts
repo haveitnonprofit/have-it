@@ -2,18 +2,15 @@ import { Injectable } from '@nestjs/common';
 import { InjectDataSource } from '@nestjs/typeorm';
 import { DataSource } from 'typeorm';
 
-export interface HealthResponse {
-  status: string;
-  database: string;
-  timestamp: string;
-  uptime: number;
+export namespace AppService {
+  export type GetHealth = Awaited<ReturnType<AppService['getHealth']>>;
 }
 
 @Injectable()
 export class AppService {
   constructor(@InjectDataSource() private readonly dataSource: DataSource) {}
 
-  async getHealth(): Promise<HealthResponse> {
+  async getHealth() {
     let databaseStatus = 'disconnected';
 
     try {
