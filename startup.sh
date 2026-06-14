@@ -65,11 +65,6 @@ echo "=========================================="
 echo "Database is ready!"
 echo "=========================================="
 
-# Install dependencies
-echo "Installing dependencies..."
-pnpm install --frozen-lockfile
-echo "Dependencies installed."
-
 # Ensure hooks are executable and configure git
 chmod +x .githooks/* 2>/dev/null || true
 git config core.hooksPath .githooks && echo "Git hooks configured." || true
